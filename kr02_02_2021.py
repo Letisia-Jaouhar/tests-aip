@@ -50,11 +50,11 @@ def task_4_3(words):
 
 
 def task_5(lst1, lst2):
-    """
-        Здесь должен быть ваш код.
-        Переменные lst1 и lst2 - два данных списка.
-        Финальное значение должно быть помещено в переменную diff.
-        """
+    
+lst1 = set([3, 5, 8, 1])
+lst2 = set([4, 5, 6, 9, 8])
+diff.difference_update(n2)
+print(list(diff))
 
     return diff
 
