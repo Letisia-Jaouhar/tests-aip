@@ -1,4 +1,11 @@
 def task_1(two_dim_words):
+    sorted_words = []
+    for d in two_dim_words:
+       sorted_words.extend(d)
+    print(sorted_words)
+    sorted_words.sort()
+    sorted_words(key=len, reverse = True)
+    print(sorted_words)
  
 
     return sorted_words
@@ -6,31 +13,28 @@ def task_1(two_dim_words):
 
 
 def task_4_1(words):
-    """
-        Здесь должен быть ваш код.
-        Переменная words - ваш кортеж слов из задания.
-        Финальное значение должно быть помещено в переменную res.
-        """
+    words1 = str(words).lower()
+    words2 = words1.split(', ')
+    res = tuple([i.count('a') ** 2 for i in words2 if i.count('a') >= 2])
 
     return res
 
 
 def task_4_2(words):  # можно сделать тесты
-    """
-        Здесь должен быть ваш код.
-        Переменная words - ваш кортеж слов из задания.
-        Финальное значение должно быть помещено в переменную res.
-        """
+    res = {len(i) for i in words if len(i) > 3}
 
     return res
 
 
 def task_4_3(words):
-    """
-        Здесь должен быть ваш код.
-        Переменная words - ваш кортеж слов из задания.
-        Финальное значение должно быть помещено в переменную res.
-        """
+    letter = "eyuioa"
+    func = str(words).lower()
+    for i in func:
+        if i.endswith('a') is True:
+            for chr in func:
+                if chr in letter:
+                    func = func.replace(chr,'')
+                    res = func
 
     return res
 
