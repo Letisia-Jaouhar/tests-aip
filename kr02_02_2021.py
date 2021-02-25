@@ -1,5 +1,15 @@
 def task_1(two_dim_words):
-
+    a = []
+    for i in range(len(two_dim_words)):
+        if 1 < len(two_dim_words[i]):
+            for step in range(len(two_dim_words[i])):
+                a.append(two_dim_words[i][step])
+        else:
+            a.append(two_dim_words[i])
+    a.sort()
+    a.sort(key=len)
+    sorted_words = a
+    
     return sorted_words
 
 
